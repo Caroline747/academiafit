@@ -24,32 +24,41 @@
       font-weight: bold;
     }
 
-    /* Hero Section Parallax */
-    #hero {
-      background: url('https://images.unsplash.com/photo-1554284126-35e2c9fa0f8e?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat fixed;
-      color: #fff;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-    }
-    #hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.6);
-    }
-    #hero .content {
-      position: relative;
-      z-index: 2;
-    }
-    #hero h1 {
-      font-size: 3rem;
-      animation: pulse 2s infinite;
-    }
+
+    /* Hero */
+#hero {
+  background: url('../img/fundoo.svg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero h1 { font-size: 3rem; }
+#hero p { font-size: 1.2rem; margin-top: 15px; }
+
+/* Ícones flutuantes */
+.floating-icon {
+  position: absolute;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  animation: float 6s ease-in-out infinite;
+}
+
+.icon1 { top: 30%; left: 85%; animation-delay: 0s; }
+.icon2 { top: 60%; left: 85%; animation-delay: 1.5s; }
+.icon3 { top: 40%; left: 60%; animation-delay: 3s; }
+.icon4 { top: 80%; left: 15%; animation-delay: 4.5s; }
+
+/* Animação */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
     @keyframes pulse {
       0%,100% { transform: scale(1);}
       50% { transform: scale(1.05);}
