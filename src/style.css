@@ -1,31 +1,30 @@
+html {
+  scroll-behavior: smooth;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
+nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.4s;
+}
 
-    /* Navbar */
-    nav {
-      background-color: rgba(0, 0, 0, 0.6);
-      transition: 0.4s;
-    }
-    nav.scrolled {
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-    nav a.nav-link {
-      color: #fff !important;
-      transition: 0.3s;
-    }
-    nav a.nav-link.active {
-      color: #ff6b6b !important;
-      font-weight: bold;
-    }
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+}
 
+nav a.nav-link {
+  color: #fff !important;
+  transition: 0.3s;
+}
 
-    /* Hero */
+nav a.nav-link.active {
+  color: #0dff03 !important;
+  font-weight: bold;
+}
+
 #hero {
   background: url('../img/fundoo.svg') no-repeat center center/cover;
   min-height: 100vh;
@@ -36,10 +35,33 @@
   overflow: hidden;
 }
 
-#hero h1 { font-size: 3rem; }
-#hero p { font-size: 1.2rem; margin-top: 15px; }
+#hero h1 {
+  font-size: 3rem;
+  color: #fff;
+}
 
-/* Ícones flutuantes */
+#hero p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.btn-cta {
+  background: linear-gradient(45deg, #0dff03, #0ed803);
+  border: none;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: 0.4s;
+  animation: pulse 2s infinite;
+}
+
+.btn-cta:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 .floating-icon {
   position: absolute;
   font-size: 2.5rem;
@@ -47,100 +69,113 @@
   animation: float 6s ease-in-out infinite;
 }
 
-.icon1 { top: 30%; left: 85%; animation-delay: 0s; }
-.icon2 { top: 60%; left: 85%; animation-delay: 1.5s; }
-.icon3 { top: 40%; left: 60%; animation-delay: 3s; }
-.icon4 { top: 80%; left: 15%; animation-delay: 4.5s; }
-
-/* Animação */
-@keyframes float {
-  0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+.icon1 {
+  top: 30%;
+  left: 85%;
+  animation-delay: 0s;
 }
 
-    @keyframes pulse {
-      0%,100% { transform: scale(1);}
-      50% { transform: scale(1.05);}
-    }
-    #hero p {
-      font-size: 1.2rem;
-    }
+.icon2 {
+  top: 60%;
+  left: 85%;
+  animation-delay: 1.5s;
+}
 
-    /* CTA Button */
-    .btn-cta {
-      background: linear-gradient(45deg,#ff6b6b,#ff4757);
-      border: none;
-      color: #fff;
-      padding: 12px 30px;
-      font-size: 1.2rem;
-      border-radius: 50px;
-      transition: 0.4s;
-    }
-    .btn-cta:hover {
-      transform: scale(1.1) translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
+.icon3 {
+  top: 40%;
+  left: 60%;
+  animation-delay: 3s;
+}
 
-    /* Planos Cards */
-    .card-plan {
-      border: none;
-      border-radius: 20px;
-      transition: 0.5s;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
-    .card-plan::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(120deg, rgba(255,107,107,0.2), rgba(255,71,87,0.2));
-      opacity: 0;
-      transition: 0.5s;
-    }
-    .card-plan:hover::before {
-      opacity: 1;
-    }
-    .card-plan:hover {
-      transform: translateY(-15px) scale(1.03);
-      box-shadow: 0 20px 30px rgba(0,0,0,0.3);
-    }
+.icon4 {
+  top: 80%;
+  left: 15%;
+  animation-delay: 4.5s;
+}
 
-    /* Antes e Depois */
-    .before-after img {
-      width: 100%;
-      border-radius: 15px;
-      transition: 0.4s;
-    }
-    .before-after img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-    }
+.card-plan {
+  border: none;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
 
-    /* Contato */
-    #contato input, #contato textarea {
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-    #contato input:focus, #contato textarea:focus {
-      box-shadow: 0 0 10px rgba(255,107,107,0.5);
-      border-color: #ff6b6b;
-    }
+.card-plan::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 107, 107, 0.2), rgba(255, 71, 87, 0.2));
+  opacity: 0;
+  transition: 0.5s;
+}
 
-    /* Seções */
-    section {
-      padding-top: 80px;
-      padding-bottom: 80px;
-    }
+.card-plan:hover::before {
+  opacity: 1;
+}
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #222;
-      color: #fff;
-    }
+.card-plan:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
 
-  
+.before-after img {
+  width: 100%;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.before-after img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+#contato input, #contato textarea {
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#contato input:focus, #contato textarea:focus {
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+  border-color: #ff6b6b;
+}
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
