@@ -27,9 +27,9 @@ nav a.nav-link.active {
 
 #hero {
   background: url('../img/fundoo.svg') no-repeat center center/cover;
-  min-height: 100vh;
   display: flex;
   align-items: center;
+  height: 700px;
   padding: 60px 0;
   position: relative;
   overflow: hidden;
@@ -91,6 +91,10 @@ nav a.nav-link.active {
   top: 80%;
   left: 15%;
   animation-delay: 4.5s;
+}
+
+#planos {
+  background: #0dff03;
 }
 
 .card-plan {
