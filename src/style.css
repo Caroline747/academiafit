@@ -138,6 +138,14 @@ nav a.nav-link.active {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
+#antes-depois {
+  background: url('../img/fundoo.svg') no-repeat center center/cover;
+}
+
+#antes-depois h2 {
+  color: #fff;
+}
+
 #contato input, #contato textarea {
   border-radius: 10px;
   transition: 0.3s;
