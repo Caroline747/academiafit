@@ -140,6 +140,26 @@
     </div>
   </section>
 
+  <section class="bmi-section" id="bmi">
+  <div class="container text-center">
+    <h2 class="section-title">Calculate Your BMI</h2>
+    <form class="row justify-content-center g-2" onsubmit="return false;">
+      <div class="col-md-3">
+        <input type="number" id="altura" class="form-control" placeholder="Altura (cm)">
+      </div>
+      <div class="col-md-3">
+        <input type="number" id="peso" class="form-control" placeholder="Peso (kg)">
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-custom w-100" onclick="calcularBMI()">Calcular</button>
+      </div>
+    </form>
+    <div class="mt-3">
+      <h4 id="resultado"></h4>
+    </div>
+  </div>
+</section>
+
   <footer>
     &copy; 2025 FitLife. Todos os direitos reservados.
   </footer>

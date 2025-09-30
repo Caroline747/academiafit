@@ -161,6 +161,41 @@ section {
   padding-bottom: 80px;
 }
 
+.bmi-section {
+  padding: 50px 0;
+  background: #111;
+}
+
+.bmi-section h2 {
+  color: #0dff03;
+  margin-bottom: 20px;
+}
+
+.bmi-section input {
+  background: #1b1b1b;
+  border: none;
+  color: #000;
+  padding: 10px;
+}
+
+.bmi-section input::placeholder {
+  color: #0dff03;
+}
+
+.bmi-section button {
+  background: #0dff03;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bmi-section button:hover {
+  background: #0ac202;
+  transform: scale(1.05);
+}
+
 footer {
   text-align: center;
   padding: 20px;

@@ -25,4 +25,28 @@
       });
     });
 
-    
+function calcularBMI() {
+  const altura = document.getElementById("altura").value;
+  const peso = document.getElementById("peso").value;
+  const resultado = document.getElementById("resultado");
+
+  if (altura > 0 && peso > 0) {
+    const alturaM = altura / 100; // converte para metros
+    const bmi = (peso / (alturaM * alturaM)).toFixed(2);
+
+    let classificacao = "";
+    if (bmi < 18.5) {
+      classificacao = "Abaixo do peso";
+    } else if (bmi < 24.9) {
+      classificacao = "Peso normal";
+    } else if (bmi < 29.9) {
+      classificacao = "Sobrepeso";
+    } else {
+      classificacao = "Obesidade";
+    }
+
+    resultado.innerHTML = `Seu IMC é <b>${bmi}</b> (${classificacao})`;
+  } else {
+    resultado.innerHTML = "<span class='text-danger'>Preencha altura e peso corretamente.</span>";
+  }
+}
