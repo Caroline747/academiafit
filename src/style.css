@@ -407,8 +407,6 @@ footer a:hover {
   .plan-diff { gap: 6px; }
 }
 
-// ...existing code...
-/* Footer melhorado */
 .site-footer {
   background: linear-gradient(rgba(4,6,4,0.85), rgba(4,6,4,0.85)), url('../img/fundoo.svg') no-repeat center center/cover;
   color: #e9fce9;
