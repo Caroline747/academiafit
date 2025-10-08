@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>Landing Page - Personal Trainer</title>
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <img class="navbar-brand text-white fw-bold" href="#hero" src="/img/icons8-haltere-50.png" alt="FitLife Logo" width="45" height="50"> 
+      <img class="navbar-brand text-white fw-bold" href="#hero" src="/img/icons8-haltere-50.png" alt="FitLife Logo"
+        width="45" height="50">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,26 +32,46 @@
         </ul>
       </div>
     </div>
-</nav>
+  </nav>
 
-<section id="hero">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-12 col-lg-6 mb-4 mb-lg-0 text-center text-lg-start" data-aos="fade-up">
-        <h1 class="fw-bold">Transforme seu corpo e sua saúde</h1>
-        <p class="lead">Treinos personalizados e acompanhamento nutricional completo</p>
-        <a href="#planos" class="btn btn-cta mt-3">Saiba Mais</a>
+  <section id="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0 text-center text-lg-start" data-aos="fade-up">
+          <h1 class="fw-bold">Transforme seu corpo e sua saúde</h1>
+          <p class="lead">Treinos personalizados e acompanhamento nutricional completo</p>
+          <a href="#planos" class="btn btn-cta mt-3">Saiba Mais</a>
+        </div>
+        <div class="col-12 col-lg-6 text-center" data-aos="fade-left">
+          <img src="/img/heroimg.png" alt="Treino Hardcore" class="img-fluid rounded">
+        </div>
       </div>
-      <div class="col-12 col-lg-6 text-center" data-aos="fade-left">
-        <img src="/img/heroimg.png" alt="Treino Hardcore" class="img-fluid rounded">
+
+      <img src="/img/icons8-haltere-50.png" alt="Peso" class="floating-icon icon1">
+      <img src="/img/icons8-energia-50.png" alt="Energia" class="floating-icon icon2">
+      <img src="/img/icons8-saudável-48.png" alt="Saudavel" class="floating-icon icon3">
+    </div>
+  </section>
+
+  <section class="bmi-section" id="bmi">
+    <div class="container text-center">
+      <h2 class="section-title">Calcule Seu IMC</h2>
+      <form class="row justify-content-center g-2" onsubmit="return false;">
+        <div class="col-md-3">
+          <input type="number" id="altura" class="form-control" placeholder="Altura (cm)">
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="peso" class="form-control" placeholder="Peso (kg)">
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-custom w-100" onclick="calcularBMI()">Calcular</button>
+        </div>
+      </form>
+      <div class="mt-3">
+        <h4 id="resultado"></h4>
       </div>
     </div>
-
-    <img src="/img/icons8-haltere-50.png" alt="Peso" class="floating-icon icon1">
-    <img src="/img/icons8-energia-50.png" alt="Energia" class="floating-icon icon2">
-    <img src="/img/icons8-saudável-48.png" alt="Saudavel" class="floating-icon icon3">
-  </div>
-</section>
+  </section>
 
   <section id="planos">
     <div class="container">
@@ -86,88 +109,142 @@
   </section>
 
   <section id="espaco-academia" class="bg-light">
-  <div class="container">
-    <h2 class="text-center mb-5" data-aos="fade-up">Espaço da Academia</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-10" data-aos="zoom-in">
-        <div id="academiaCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="/img/carrosel1.webp" class="d-block w-100 rounded" alt="Academia 1">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Espaço da Academia</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-10" data-aos="zoom-in">
+          <div id="academiaCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/carrosel1.webp" class="d-block w-100 rounded" alt="Academia 1">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/carrosel2.webp" class="d-block w-100 rounded" alt="Academia 2">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/carrosel3.webp" class="d-block w-100 rounded" alt="Academia 3">
+              </div>
             </div>
-            <div class="carousel-item">
-              <img src="/img/carrosel2.webp" class="d-block w-100 rounded" alt="Academia 2">
-            </div>
-            <div class="carousel-item">
-              <img src="/img/carrosel3.webp" class="d-block w-100 rounded" alt="Academia 3">
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#academiaCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#academiaCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#academiaCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Anterior</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="faq" class="faq-section">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="section-title mb-0" data-aos="fade-up">Perguntas Frequentes</h2>
+      <div>
+        <button class="btn btn-sm btn-outline-light me-2" type="button" onclick="expandAllFAQ()">Expandir tudo</button>
+        <button class="btn btn-sm btn-outline-light" type="button" onclick="collapseAllFAQ()">Recolher tudo</button>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <input id="faqSearch" class="form-control faq-search" type="search" placeholder="Pesquisar perguntas..." oninput="filterFAQ()">
+      </div>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+            Quais os tipos de plano disponíveis?
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#academiaCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Próximo</span>
+        </h2>
+        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Oferecemos Plano Básico, Premium e VIP — desde treinos semanais até acompanhamento diário com nutricionista.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+            Como funciona a avaliação inicial?
           </button>
+        </h2>
+        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            A avaliação inclui entrevista, medição de composição corporal e objetivo de treino para montar seu programa personalizado.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+            Posso mudar de plano depois de assinar?
+          </button>
+        </h2>
+        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sim — é possível migrar entre planos. Consulte nossa equipe para ajustar datas e valores prorrateados.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+            Vocês oferecem treinos online?
+          </button>
+        </h2>
+        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sim — temos opções presenciais e online com acompanhamento por vídeo e plano alimentar digital.
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="bmi-section" id="bmi">
-  <div class="container text-center">
-    <h2 class="section-title">Calcule Seu IMC</h2>
-    <form class="row justify-content-center g-2" onsubmit="return false;">
-      <div class="col-md-3">
-        <input type="number" id="altura" class="form-control" placeholder="Altura (cm)">
-      </div>
-      <div class="col-md-3">
-        <input type="number" id="peso" class="form-control" placeholder="Peso (kg)">
-      </div>
-      <div class="col-md-2">
-        <button type="button" class="btn btn-custom w-100" onclick="calcularBMI()">Calcular</button>
-      </div>
-    </form>
-    <div class="mt-3">
-      <h4 id="resultado"></h4>
-    </div>
-  </div>
-</section>
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 mb-3 mb-md-0">
-        <h5>FitLife</h5>
-        <p>Transforme seu corpo e sua saúde com nossos treinos personalizados e acompanhamento nutricional completo.</p>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <h5>FitLife</h5>
+          <p>Transforme seu corpo e sua saúde com nossos treinos personalizados e acompanhamento nutricional completo.
+          </p>
+        </div>
+        <div class="col-md-3 mb-3 mb-md-0">
+          <h5>Navegação</h5>
+          <ul class="list-unstyled">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#planos">Planos</a></li>
+            <li><a href="#espaco-academia">Fotos</a></li>
+            <li><a href="#bmi">Calcule seu IMC</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5> iContato</h5>
+          <p>Email: contato@fitlife.com</p>
+          <p>Telefone: (11) 1234-5678</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-3 mb-3 mb-md-0">
-        <h5>Navegação</h5>
-        <ul class="list-unstyled">
-          <li><a href="#hero">Início</a></li>
-          <li><a href="#planos">Planos</a></li>
-          <li><a href="#espaco-academia">Fotos</a></li>
-          <li><a href="#bmi">Calcule seu IMC</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h5> iContato</h5>
-        <p>Email: contato@fitlife.com</p>
-        <p>Telefone: (11) 1234-5678</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="src/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="src/script.js"></script>
 </body>
 
 </html>

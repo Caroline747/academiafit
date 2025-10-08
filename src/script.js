@@ -1,4 +1,4 @@
-    AOS.init({
+AOS.init({
       duration: 1000,
       once: true
     });
@@ -26,20 +26,24 @@
     });
 
 function calcularBMI() {
-  const altura = document.getElementById("altura").value;
-  const peso = document.getElementById("peso").value;
+  const alturaVal = document.getElementById("altura").value;
+  const pesoVal = document.getElementById("peso").value;
   const resultado = document.getElementById("resultado");
 
-  if (altura > 0 && peso > 0) {
-    const alturaM = altura / 100; // converte para metros
-    const bmi = (peso / (alturaM * alturaM)).toFixed(2);
+  const alturaNum = parseFloat(alturaVal);
+  const pesoNum = parseFloat(pesoVal);
+
+  if (!isNaN(alturaNum) && alturaNum > 0 && !isNaN(pesoNum) && pesoNum > 0) {
+    const alturaM = alturaNum / 100; // converte para metros
+    const bmiNum = pesoNum / (alturaM * alturaM);
+    const bmi = bmiNum.toFixed(2);
 
     let classificacao = "";
-    if (bmi < 18.5) {
+    if (bmiNum < 18.5) {
       classificacao = "Abaixo do peso";
-    } else if (bmi < 24.9) {
+    } else if (bmiNum < 25) {
       classificacao = "Peso normal";
-    } else if (bmi < 29.9) {
+    } else if (bmiNum < 30) {
       classificacao = "Sobrepeso";
     } else {
       classificacao = "Obesidade";
@@ -50,3 +54,36 @@ function calcularBMI() {
     resultado.innerHTML = "<span class='text-danger'>Preencha altura e peso corretamente.</span>";
   }
 }
+
+function filterFAQ() {
+  const q = document.getElementById('faqSearch').value.toLowerCase().trim();
+  const items = document.querySelectorAll('#faqAccordion .accordion-item');
+  items.forEach(item => {
+    const btn = item.querySelector('.accordion-button');
+    const text = btn.textContent.toLowerCase();
+    if (!q || text.includes(q)) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+      // se estiver aberto, fechar
+      const collapse = item.querySelector('.accordion-collapse');
+      if (collapse.classList.contains('show')) {
+        bootstrap.Collapse.getOrCreateInstance(collapse).hide();
+      }
+    }
+  });
+}
+
+function expandAllFAQ() {
+  const collapses = document.querySelectorAll('#faqAccordion .accordion-collapse');
+  collapses.forEach(c => bootstrap.Collapse.getOrCreateInstance(c).show());
+}
+
+function collapseAllFAQ() {
+  const collapses = document.querySelectorAll('#faqAccordion .accordion-collapse');
+  collapses.forEach(c => bootstrap.Collapse.getOrCreateInstance(c).hide());
+}
+
+// inicializar AOS (se estiver usando)
+if (window.AOS) AOS.init();
+
