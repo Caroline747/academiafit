@@ -328,11 +328,11 @@ section {
 }
 
 #faq .accordion-button:not(.collapsed) {
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: rgba(29, 194, 23, 0.637);
 }
 
 #faq .accordion-body {
-  color: inherit;
+  color: #000;
 }
 
 #faq .faq-search {
@@ -341,7 +341,7 @@ section {
 }
 
 #faq .btn-outline-light {
-  background: #0ac202;
+  background: #fff;
   border: none;
   color: #000;
   font-weight: bold;
