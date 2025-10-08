@@ -108,7 +108,8 @@ nav a.nav-link.active {
   background: url('../img/hero5.jpeg') no-repeat center center/cover;
 }
 
-#planos h2 {
+#planos h2, 
+#planos p {
   color: #fff;
   margin-bottom: 30px;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -155,7 +156,7 @@ nav a.nav-link.active {
 
 .card-plan .plan-features li {
   padding: 6px 0;
-  color: #0dff03;
+  color: #fff;
 }
 
 .card-plan .plan-features .fa-check {
@@ -302,41 +303,54 @@ section {
 }
 
 .faq-section {
-  background: url('../img/hero5.jpeg') no-repeat center center/cover;
+  background: url('../img/hero4.jpeg') no-repeat center center/cover;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.faq-search {
-  background: #111;
-  border: 1px solid rgba(13, 255, 3, 0.2);
+.faq-section h2 {
   color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.faq-search::placeholder {
-  color: rgba(13, 255, 3, 0.6);
+#faq,
+.faq-section {
+  background-color: #0dff03;
+  color: #062c00; /* texto escuro para melhor contraste */
+  padding: 60px 0;
 }
 
-.accordion-button {
-  background: rgba(255, 255, 255, 0.03);
-  color: #fff;
-}
-
-.accordion-button:not(.collapsed) {
-  background: rgba(13, 255, 3, 0.08);
+#faq .accordion-button {
+  background-color: transparent;
   color: #000;
-  font-weight: 600;
+  font-weight: bold;
+  border: none;
 }
 
-.accordion-body {
-  background: rgba(0, 0, 0, 0.04);
-  color: #111;
+#faq .accordion-button:not(.collapsed) {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+#faq .accordion-body {
+  color: inherit;
+}
+
+#faq .faq-search {
+  background: #ffffff;
+  color: #000000;
+}
+
+#faq .btn-outline-light {
+  background: #0ac202;
+  border: none;
+  color: #000;
+  font-weight: bold;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background: url('../img/hero2.jpeg') no-repeat center center/cover;
+  background: url('../img/fundoo.svg') no-repeat center center/cover;
   color: #fff;
 }
 
