@@ -297,17 +297,25 @@
   </div>
 </section>
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 mb-3 mb-md-0">
-          <h5>FitLife</h5>
-          <p>Transforme seu corpo e sua saúde com nossos treinos personalizados e acompanhamento nutricional completo.
-          </p>
+  <footer role="contentinfo" aria-label="Rodapé FitLife" class="site-footer">
+    <div class="container footer-container">
+      <div class="row footer-grid py-5">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <a href="#hero" class="d-inline-flex align-items-center mb-2 text-decoration-none">
+            <img src="/img/icons8-haltere-50.png" alt="Logo FitLife" width="45" height="45">
+            <span class="ms-2 h5 mb-0 text-white fw-bold">FitLife</span>
+          </a>
+          <p class="text-light small mb-2">Transforme seu corpo e sua saúde com treinos personalizados e acompanhamento nutricional completo.</p>
+          <div class="social-icons mt-2">
+            <a href="#" aria-label="Facebook" class="me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter" class="me-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
-        <div class="col-md-3 mb-3 mb-md-0">
-          <h5>Navegação</h5>
-          <ul class="list-unstyled">
+
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h6 class="text-white">Navegação</h6>
+          <ul class="list-unstyled footer-links">
             <li><a href="#hero">Início</a></li>
             <li><a href="#planos">Planos</a></li>
             <li><a href="#espaco-academia">Fotos</a></li>
@@ -315,17 +323,22 @@
             <li><a href="#contato">Contato</a></li>
           </ul>
         </div>
-        <div class="col-md-3">
-          <h5> iContato</h5>
-          <p>Email: contato@fitlife.com</p>
-          <p>Telefone: (11) 1234-5678</p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
+
+        <div class="col-md-4">
+          <h6 class="text-white">Contato & Newsletter</h6>
+          <p class="text-light small mb-2">Email: <a href="mailto:contato@fitlife.com">contato@fitlife.com</a></p>
+          <p class="text-light small mb-2">Telefone: (11) 1234-5678</p>
+          <form class="d-flex" onsubmit="return false;" aria-label="Inscrever newsletter">
+            <input type="email" class="form-control me-2 footer-newsletter" placeholder="Seu email" aria-label="Email para newsletter">
+            <button class="btn btn-outline-primary" type="submit">Inscrever</button>
+          </form>
         </div>
       </div>
+
+      <div class="footer-bottom text-center py-3 border-top mt-4">
+        <small class="text-light">© 2025 FitLife. <a href="#" class="text-light">Termos</a> • <a href="#" class="text-light">Privacidade</a></small>
+      </div>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

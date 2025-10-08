@@ -407,3 +407,65 @@ footer a:hover {
   .plan-diff { gap: 6px; }
 }
 
+// ...existing code...
+/* Footer melhorado */
+.site-footer {
+  background: linear-gradient(rgba(4,6,4,0.85), rgba(4,6,4,0.85)), url('../img/fundoo.svg') no-repeat center center/cover;
+  color: #e9fce9;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.footer-links li {
+  margin: 6px 0;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  transition: color .2s;
+}
+.footer-links a:hover {
+  color: var(--primary-green);
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  margin-right: 8px;
+  transition: background .2s, transform .15s;
+}
+.social-icons a:hover {
+  background: var(--primary-green);
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.footer-newsletter {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #fff;
+}
+.footer-newsletter::placeholder { color: rgba(255,255,255,0.7); }
+
+.footer-bottom {
+  background: transparent;
+  border-color: rgba(255,255,255,0.06);
+}
+
+.site-footer a { color: #e9fce9; }
+
+/* Melhor responsividade */
+@media (max-width: 767.98px) {
+  .footer-grid { text-align: center; }
+  .footer-grid .col-md-4 { margin-bottom: 1rem; }
+  .footer-newsletter { width: 100%; margin-bottom: 8px; }
+  .d-flex.form-inline { flex-direction: column; gap: 8px; }
+}
