@@ -198,6 +198,38 @@ section {
   transform: scale(1.05);
 }
 
+.faq-section {
+  background: #0dff03;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.faq-search {
+  background: #111;
+  border: 1px solid rgba(13, 255, 3, 0.2);
+  color: #fff;
+}
+
+.faq-search::placeholder {
+  color: rgba(13, 255, 3, 0.6);
+}
+
+.accordion-button {
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(13, 255, 3, 0.08);
+  color: #000;
+  font-weight: 600;
+}
+
+.accordion-body {
+  background: rgba(0, 0, 0, 0.04);
+  color: #111;
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -205,44 +237,17 @@ footer {
   color: #fff;
 }
 
-
-.faq-section {
-  background: linear-gradient(180deg, rgba(13,255,3,0.06), transparent);
-  padding-top: 60px;
-  padding-bottom: 60px;
+footer a {
+  color: #0dff03;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.faq-search {
-  background: #111;
-  border: 1px solid rgba(13,255,3,0.2);
-  color: #fff;
+footer a:hover {
+  text-decoration: underline;
 }
 
-.faq-search::placeholder {
-  color: rgba(13,255,3,0.6);
-}
 
-.accordion-button {
-  background: rgba(255,255,255,0.03);
-  color: #fff;
-}
-
-.accordion-button:not(.collapsed) {
-  background: rgba(13,255,3,0.08);
-  color: #000;
-  font-weight: 600;
-}
-
-.accordion-body {
-  background: rgba(0,0,0,0.04);
-  color: #111;
-}
-
-/* responsividade: reduzir padding no mobile */
-@media (max-width: 576px) {
-  .faq-section { padding-top: 30px; padding-bottom: 30px; }
-  .accordion-button { font-size: 0.95rem; }
-}
 
 @keyframes float {
   0% {
@@ -265,5 +270,16 @@ footer {
 
   50% {
     transform: scale(1.05);
+  }
+}
+
+@media (max-width: 576px) {
+  .faq-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .accordion-button {
+    font-size: 0.95rem;
   }
 }
