@@ -93,11 +93,20 @@ nav a.nav-link.active {
   animation-delay: 4.5s;
 }
 
-#planos {
-  background: #0dff03;
+#sobre {
+  background: url('../img/hero6.jpeg') no-repeat center center/cover;
+  color: #fff;
 }
 
+#planos {
+  background: url('../img/hero5.jpeg') no-repeat center center/cover;
+}
 
+#planos h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
 
 .card-plan {
   border: none;
@@ -165,7 +174,7 @@ section {
 
 .bmi-section {
   padding: 50px 0;
-  background: #111;
+  background: url('../img/hero2.jpeg') no-repeat center center/cover;
 }
 
 .bmi-section h2 {
@@ -199,7 +208,7 @@ section {
 }
 
 .faq-section {
-  background: #0dff03;
+  background: url('../img/hero5.jpeg') no-repeat center center/cover;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -233,7 +242,7 @@ section {
 footer {
   text-align: center;
   padding: 20px;
-  background: #222;
+  background: url('../img/hero2.jpeg') no-repeat center center/cover;
   color: #fff;
 }
 

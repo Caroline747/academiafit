@@ -26,9 +26,9 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="#hero">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#bmi">Calcule seu IMC</a></li>
           <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#espaco-academia">Fotos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bmi">Calcule seu IMC</a></li>
+          <li class="nav-item"><a class="nav-link" href="#espaco-academia">Galeria</a></li>
           <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
         </ul>
       </div>
@@ -57,9 +57,6 @@
   <section id="sobre" class="bg-light">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-12 col-lg-6 mb-4 mb-lg-0 text-center text-lg-start" data-aos="fade-right">
-          <img src="/img/sobreimg.png" alt="Sobre o Personal Trainer" class="img-fluid rounded">
-        </div>
         <div class="col-12 col-lg-6" data-aos="fade-left">
           <h2 class="fw-bold">Sobre Nós</h2>
           <p>Na FitLife, acreditamos que cada pessoa é única. Por isso, oferecemos treinos personalizados e
@@ -72,26 +69,6 @@
           </ul>
           <a href="#contato" class="btn btn-cta mt-3">Entre em Contato</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bmi-section" id="bmi">
-    <div class="container text-center">
-      <h2 class="section-title">Calcule Seu IMC</h2>
-      <form class="row justify-content-center g-2" onsubmit="return false;">
-        <div class="col-md-3">
-          <input type="number" id="altura" class="form-control" placeholder="Altura (cm)">
-        </div>
-        <div class="col-md-3">
-          <input type="number" id="peso" class="form-control" placeholder="Peso (kg)">
-        </div>
-        <div class="col-md-2">
-          <button type="button" class="btn btn-custom w-100" onclick="calcularBMI()">Calcular</button>
-        </div>
-      </form>
-      <div class="mt-3">
-        <h4 id="resultado"></h4>
       </div>
     </div>
   </section>
@@ -127,6 +104,26 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bmi-section" id="bmi">
+    <div class="container text-center">
+      <h2 class="section-title">Calcule Seu IMC</h2>
+      <form class="row justify-content-center g-2" onsubmit="return false;">
+        <div class="col-md-3">
+          <input type="number" id="altura" class="form-control" placeholder="Altura (cm)">
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="peso" class="form-control" placeholder="Peso (kg)">
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-custom w-100" onclick="calcularBMI()">Calcular</button>
+        </div>
+      </form>
+      <div class="mt-3">
+        <h4 id="resultado"></h4>
       </div>
     </div>
   </section>
