@@ -21,23 +21,6 @@ nav a.nav-link.active {
 
 #hero {
   background: url('../img/fundoo.svg') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  height: 700px;
-  padding: 60px 0;
-  position: relative;
-  overflow: hidden;
-}
-
-#hero h1 {
-  font-size: 3rem;
-  color: #fff;
-}
-
-#hero p {
-  font-size: 1.2rem;
-  margin-top: 15px;
-  color: #fff;
 }
 
 .btn-cta {
