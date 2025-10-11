@@ -4,21 +4,9 @@
   --btn-text-dark: #000;
 }
 
-html {
+html, body {
   scroll-behavior: smooth;
-}
-
-body {
   font-family: 'Roboto', sans-serif;
-}
-
-nav {
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: 0.4s;
-}
-
-nav.scrolled {
-  background-color: rgba(0, 0, 0, 0.9);
 }
 
 nav a.nav-link {
