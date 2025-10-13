@@ -82,19 +82,6 @@ section {
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.card-plan::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(13, 255, 3, 0.1);
-  opacity: 0;
-  transition: opacity 0.5s, transform 0.5s;
-}
-
-.card-plan:hover::before {
-  opacity: 1;
-}
-
 .card-plan:hover {
   transform: translateY(-15px) scale(1.03);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3) !important;
@@ -115,6 +102,11 @@ section {
   padding: 0.45rem 0.9rem;
 }
 
+.card-plan.popular {
+  border: 2px solid #28a745;
+  transform: scale(1.03);
+}
+
 #planos .card-plan {
   background: url('../img/fundoo.svg') no-repeat center center/cover;
   color: #0dff03;
@@ -125,6 +117,11 @@ section {
   background: #0dff03 !important;
   color: #000 !important;
   border: none !important;
+}
+
+.bg-green:hover {
+  background: #0ac202 !important;
+  color: #000 !important;
 }
 
 .bmi-section {
