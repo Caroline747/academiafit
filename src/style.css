@@ -216,5 +216,9 @@ footer {
     left: 60%;
     animation-delay: 0s;
   }
+
+  #hero img {
+    display: none;
+  }
   
 }
