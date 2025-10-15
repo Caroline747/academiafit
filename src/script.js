@@ -25,34 +25,53 @@ AOS.init({
       });
     });
 
-function calcularBMI() {
-  const alturaVal = document.getElementById("altura").value;
-  const pesoVal = document.getElementById("peso").value;
+function calcularBMI(event) {
+  if (event && event.preventDefault) event.preventDefault();
+
+  const alturaEl = document.getElementById("altura");
+  const pesoEl = document.getElementById("peso");
   const resultado = document.getElementById("resultado");
 
-  const alturaNum = parseFloat(alturaVal);
-  const pesoNum = parseFloat(pesoVal);
+  const alturaStr = (alturaEl.value || "").toString().trim().replace(',', '.');
+  const pesoStr = (pesoEl.value || "").toString().trim().replace(',', '.');
 
-  if (!isNaN(alturaNum) && alturaNum > 0 && !isNaN(pesoNum) && pesoNum > 0) {
-    const alturaM = alturaNum / 100; // converte para metros
-    const bmiNum = pesoNum / (alturaM * alturaM);
-    const bmi = bmiNum.toFixed(2);
+  const alturaNum = parseFloat(alturaStr);
+  const pesoNum = parseFloat(pesoStr);
 
-    let classificacao = "";
-    if (bmiNum < 18.5) {
-      classificacao = "Abaixo do peso";
-    } else if (bmiNum < 25) {
-      classificacao = "Peso normal";
-    } else if (bmiNum < 30) {
-      classificacao = "Sobrepeso";
-    } else {
-      classificacao = "Obesidade";
-    }
-
-    resultado.innerHTML = `Seu IMC é <b>${bmi}</b> (${classificacao})`;
-  } else {
-    resultado.innerHTML = "<span class='text-danger'>Preencha altura e peso corretamente.</span>";
+  if (isNaN(alturaNum) || alturaNum <= 0) {
+    resultado.innerHTML = "<span class='text-danger'>Informe uma altura válida (cm).</span>";
+    alturaEl.focus();
+    return false;
   }
+  if (isNaN(pesoNum) || pesoNum <= 0) {
+    resultado.innerHTML = "<span class='text-danger'>Informe um peso válido (kg).</span>";
+    pesoEl.focus();
+    return false;
+  }
+
+  let alturaCm = alturaNum;
+  if (alturaNum <= 3) {
+    alturaCm = alturaNum * 100;
+  }
+
+  const alturaM = alturaCm / 100;
+  const bmiNum = pesoNum / (alturaM * alturaM);
+  const bmi = bmiNum.toFixed(2);
+
+  let classificacao = "";
+  if (bmiNum < 18.5) {
+    classificacao = "Abaixo do peso";
+  } else if (bmiNum < 25) {
+    classificacao = "Peso normal";
+  } else if (bmiNum < 30) {
+    classificacao = "Sobrepeso";
+  } else {
+    classificacao = "Obesidade";
+  }
+
+  resultado.innerHTML = `Seu IMC é <b>${bmi}</b> (${classificacao})`;
+  resultado.focus();
+  return true;
 }
 
 function filterFAQ() {
