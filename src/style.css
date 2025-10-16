@@ -48,6 +48,8 @@ section {
   transition: 0.4s;
   animation: pulse 2s infinite;
   color: #000;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .btn-cta:hover {
